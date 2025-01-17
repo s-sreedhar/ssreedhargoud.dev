@@ -7,7 +7,6 @@ import ProjectHeader from '@/components/ProjectHeader.astro'
 import { getCustomTransition } from '@/lib/customTransition'
 
 const projects = await getCollection('projects')
-console.log('Projects in line 10 are', projects.length)
 ---
 
 <section id='projects' class='mt-40 scroll-mt-16'>

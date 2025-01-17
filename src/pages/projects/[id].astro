@@ -26,8 +26,7 @@ const { Content, headings } = await render(entry)
 const getLastUpdatedTime = client.api.github['last-updated-file']
 const { latestCommitUrl, lastUpdatedTime } = await getLastUpdatedTime
   .$get({ query: { path: `projects/${entry.id}.mdx` } })
-  .then((res) => res.json())
-console.log('The line 27 data is', latestCommitUrl, lastUpdatedTime, entry)
+  .then((res: { json: () => any }) => res.json())
 const { minutes, words } = readingTime(entry.body!)
 
 const projectStructuredData = getProjectSchema(entry)

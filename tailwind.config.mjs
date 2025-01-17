@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   // darkMode: ['class'],
   darkMode: 'selector',
   content: [
@@ -12,7 +12,7 @@ module.exports = {
   prefix: '',
   theme: {
     container: {
-      center: 'true',
+      center: true,
       padding: '2rem',
       screens: {
         '2xl': '1400px'
