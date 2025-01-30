@@ -19,7 +19,7 @@ jobs:
           node-version: 18 # Change if necessary
 
       - name: Install Dependencies
-        run: npm install # Use `pnpm install` or `yarn install` if applicable
+        run: npm install --legacy-peer-deps # Use `pnpm install` or `yarn install` if applicable
 
       - name: Build Astro Site
         run: npm run build
